@@ -2,6 +2,19 @@
 
 所有版本变更记录遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)。
 
+## [Unreleased]
+
+### Added
+- `docs/07_sop/`：新增 AI-Native Coding 可执行 SOP 工作台，覆盖单人、团队、简单项目、复杂产品、角色路由和任务模板。
+- `docs/07_sop/templates/`：新增任务卡、需求规格、契约变更、PR Review、handoff 模板。
+
+### Changed
+- `docs/00_AI_NATIVE_SOP.md`：重写为 0-7 阶段总纲 SOP，明确 ROM/RAM、角色体系、任务最小单元和完成定义。
+- `README.md`、`docs/06_handbooks/README.md`：补充 SOP 快速入口。
+- `docs/06_handbooks/ai-native/README.md`、`docs/06_handbooks/traditional/README.md`：补充阶段 SOP 和角色路由入口。
+
+---
+
 ## [2.1.1] - 2026-04-07
 
 ### Added

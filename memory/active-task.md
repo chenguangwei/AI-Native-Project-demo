@@ -1,5 +1,12 @@
 # 🎯 当前主线任务 (Active Tasks)
 
+## AI-Native Coding SOP 编排脚手架优化（已完成）
+- [x] 基于 `docs/00_ai_system/ai-coding-guide.md` 提炼 0-7 阶段 AI-native coding 总流程
+- [x] 新增 `docs/07_sop/`，覆盖单人、团队、简单项目、复杂产品、角色路由和任务模板
+- [x] 重写 `docs/00_AI_NATIVE_SOP.md` 为可执行总纲
+- [x] 更新 `README.md`、`docs/06_handbooks/`、`docs/00_ai_system/README.md` 导航入口
+- [x] 运行本地 Markdown 相对链接检查，确认新增 SOP 导航无死链
+
 ## OMC 对齐升级（已完成）
 - [x] 对齐上游 `oh-my-claudecode` 最新版本（`4.11.2`）
 - [x] 同步 `.claude/skills/omc/` 与 `.agents/skills/omc/` vendored 内容

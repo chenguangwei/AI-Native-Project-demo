@@ -47,8 +47,21 @@
     ├── 03_architecture/   # 架构设计（API、数据库、流程）
     ├── 04_qa/             # 测试用例 + 审计日志
     ├── 05_ops/            # 运维手册（部署、Runbook）
-    └── 06_handbooks/      # 各角色操作手册与技能查询索引
+    ├── 06_handbooks/      # 各角色操作手册与技能查询索引
+    └── 07_sop/            # AI-Native Coding 可执行 SOP 工作台
 ```
+
+---
+
+## SOP 快速入口
+
+| 你的场景 | 入口 |
+|---------|------|
+| 不知道整个流程怎么走 | [AI-Native Coding 总纲 SOP](docs/00_AI_NATIVE_SOP.md) |
+| 一个人做简单项目 | [单人 SOP](docs/07_sop/solo.md) + [简单项目 SOP](docs/07_sop/project-types/simple-project.md) |
+| 多人协作 | [团队 SOP](docs/07_sop/team.md) + [角色路由](docs/07_sop/roles/README.md) |
+| 复杂产品、多语言、多服务 | [复杂产品 SOP](docs/07_sop/project-types/complex-product.md) |
+| 准备交给 AI 开发 | [AI Coding 任务卡模板](docs/07_sop/templates/task-card.md) |
 
 ---
 
@@ -300,7 +313,7 @@ skill 会自动完成完整升级流程：
 | AI 工程师 | `ai-engineer` | Agent 编排、LLM 集成、AI 流水线 | [📖 查看](docs/06_handbooks/ai-native/ai-engineer.md) |
 | 质量工程师 | `quality-engineer` | 全栈测试 + 安全 + 可靠性 + 可观测性 | [📖 查看](docs/06_handbooks/ai-native/quality-engineer.md) |
 
-> 👨‍👩‍👧‍👦 **完整协作流程** 详见 👉 [AI-Native 角色全矩阵协同手册](docs/06_handbooks/ai-native/product-workflow.md) | [全局操作总纲 SOP](docs/00_AI_NATIVE_SOP.md)
+> **完整协作流程** 详见 [AI-Native Coding SOP 工作台](docs/07_sop/README.md) | [AI-Native 角色全矩阵协同手册](docs/06_handbooks/ai-native/product-workflow.md) | [全局操作总纲 SOP](docs/00_AI_NATIVE_SOP.md)
 
 #### 传统体系 👥（过渡期）
 
@@ -314,7 +327,7 @@ skill 会自动完成完整升级流程：
 | 测试工程师 | `quality-engineer` | 测试、安全、质量保障 | [📖 查看](docs/06_handbooks/traditional/qa.md) |
 | 运维工程师 | `delivery-engineer` | 基础设施、部署、监控 | [📖 查看](docs/06_handbooks/traditional/devops.md) |
 
-> 👨‍👩‍👧‍👦 **完整协作流程** 详见 👉 [传统体系操作大全](docs/06_handbooks/traditional/README.md) | [全局操作总纲 SOP](docs/00_AI_NATIVE_SOP.md)
+> **完整协作流程** 详见 [AI-Native Coding SOP 工作台](docs/07_sop/README.md) | [传统体系操作大全](docs/06_handbooks/traditional/README.md) | [全局操作总纲 SOP](docs/00_AI_NATIVE_SOP.md)
 
 ---
 
@@ -365,10 +378,11 @@ git sparse-checkout set ops docs/05_ops memory
 
 | 文档 | 说明 |
 |------|------|
-| [全局操作总纲 SOP(必读)](docs/00_AI_NATIVE_SOP.md) | 最核心的协作规范：ROM/RAM 分区及过渡期剧本指引 |
+| [全局操作总纲 SOP(必读)](docs/00_AI_NATIVE_SOP.md) | 最核心的协作规范：0-7 阶段、ROM/RAM、角色体系 |
+| [AI-Native Coding SOP 工作台](docs/07_sop/README.md) | 单人、团队、简单项目、复杂产品、角色路由和任务模板 |
 | [Skills 速查索引](docs/06_handbooks/ai-native/SKILLS_INDEX.md) | 88 个强悍技能按 4 大职业分类，含触发方式 |
 | [Commands 命令集](.claude/commands/README.md) | 轻量且高频的核心执行命令 |
-| [Agents 说明](.claude/agents/README.md) | 后台分析师/测试员/监控卫士列表 |
+| [Agents 目录](.claude/agents/) | 后台分析师/测试员/监控卫士列表 |
 | [AI 系统文档](docs/00_ai_system/) | 路由矩阵、subtree 接入手册 |
 | [Claude Code 使用技巧：从入门到精通](docs/00_ai_system/claude-code-40-best-practices.md) | 从配置到多 Agent，40+ 个提升工作流效率的技巧 |
 | [Graphify 使用手册](docs/00_ai_system/graphify-guide.md) | Graphify 知识图谱构建与查询：安装、索引、搜索、可视化 |

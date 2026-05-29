@@ -1,48 +1,39 @@
-#:schema https://developers.openai.com/codex/config-schema.json
-
-# AI-Native Scaffold — Codex CLI 配置
-#
-# 复制到 ~/.codex/config.toml 作为全局默认，或保留在项目根目录作为项目级配置。
-# 官方文档：https://developers.openai.com/codex/config-reference
-
-# 运行时设置
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 web_search = "live"
 
-# 指令文件：优先读取 AGENTS.md 和 .codex/AGENTS.md
-# model_instructions_file = "/absolute/path/to/instructions.md"
-
-# MCP 服务器（按需启用）
 [mcp_servers.github]
 command = "npx"
-args = ["-y", "@modelcontextprotocol/server-github"]
+args = [
+    "-y",
+    "@modelcontextprotocol/server-github",
+]
 
 [mcp_servers.context7]
 command = "npx"
-args = ["-y", "@upstash/context7-mcp@latest"]
+args = [
+    "-y",
+    "@upstash/context7-mcp@latest",
+]
 
 [mcp_servers.sequential-thinking]
 command = "npx"
-args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+args = [
+    "-y",
+    "@modelcontextprotocol/server-sequential-thinking",
+]
 
-# 额外 MCP 服务器（需要时解注释）：
-# [mcp_servers.memory]
-# command = "npx"
-# args = ["-y", "@modelcontextprotocol/server-memory"]
-#
-# [mcp_servers.playwright]
-# command = "npx"
-# args = ["-y", "@playwright/mcp@latest", "--extension"]
-#
-# [mcp_servers.exa]
-# url = "https://mcp.exa.ai/mcp"
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = [
+    "-y",
+    "chrome-devtools-mcp@latest",
+    "--autoConnect",
+]
 
 [features]
-# 多 agent 支持（实验性，2026年3月起可用）
 multi_agent = true
 
-# Profiles — 切换命令: codex -p <name>
 [profiles.strict]
 approval_policy = "on-request"
 sandbox_mode = "read-only"
@@ -53,7 +44,6 @@ approval_policy = "never"
 sandbox_mode = "workspace-write"
 web_search = "live"
 
-# 多 Agent 配置
 [agents]
 max_threads = 4
 max_depth = 1

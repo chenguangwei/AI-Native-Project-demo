@@ -3,6 +3,19 @@
 > **前情提要**: 这不是流水账，这是给下一个会话（或者是给接手的人类）留的接力棒。旧的记录请随时清空。
 
 ## 最新交接点 
+**[交付工程师 - 2026-05-29 14:45]**
+
+- **刚刚干了什么**:
+  - 基于 `docs/00_ai_system/ai-coding-guide.md` 完成 AI-native coding SOP 脚手架优化。
+  - 新增 `docs/07_sop/`：生命周期总流程、单人流程、团队流程、简单项目、复杂产品、角色路由、任务卡/需求规格/契约变更/Review/handoff 模板。
+  - 重写 `docs/00_AI_NATIVE_SOP.md`，让总纲直接回答“整个 SOP 流程是什么”。
+  - 更新 `README.md`、`CHANGELOG.md`、`docs/06_handbooks/README.md`、`docs/06_handbooks/ai-native/README.md`、`docs/06_handbooks/traditional/README.md`、`docs/00_ai_system/README.md` 的入口导航。
+- **剩下的坑 / Blocker**:
+  - 无功能阻塞。
+  - 工作区存在本次任务之外的既有改动：`.codex/config.toml`、`.codex/agents/*.toml`、`docs/01_product/*-prd-prompt.md`、`docs/00_ai_system/ai-coding-guide.md`。
+- **下一步要做什么 (Next Steps)**:
+  - 人类确认文档结构后再提交；不要未经确认 push。
+
 **[交付工程师 - 2026-04-09 12:00]**
 
 - **刚刚干了什么**:

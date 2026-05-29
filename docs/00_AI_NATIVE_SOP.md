@@ -1,91 +1,180 @@
-# 🤖 AI-Native 的最佳协同范式 (SOP)
+# AI-Native Coding 总纲 SOP
 
-> 本文档是整个工程项目的基石。无论你是 AI 工程师、全栈交付者，还是正处于过渡期的传统研发（前端/后端/测试/产品），阅读本文将改变你与大模型协同工作的方式。
-
----
-
-## 🏗️ 核心基建哲学：ROM 与 RAM 隔离
-
-不要再把所有的上下文都塞给 AI！人类记忆和计算机内存都有边界，AI 的上下文窗口（Context Window）同样如此。我们采用计算机底层思维来架构知识体系：
-
-### 📀 `docs/` = ROM（只读/持久化存储）
-
-这是**面向全团队（人类+AI）的工作与知识固化目录**。
-它应该是相对静态的、权威的、长期的。你只能在特定节点（如需求确立、架构通过、发版总结）去修改它。
-- **包含内容**：需求文档 (PRD)、架构设计图、API 契约、数据库 Schema、团队角色定义 (`06_handbooks/`)。
-- **AI 行为**：只读不写，遇到知识盲点时过来查阅。
-
-### 🧠 `memory/` = RAM（运存/短时工作上下文）
-
-这是**专门面向 AI 的短中期上下文记忆库**。
-它的首要作用是避免 AI 在开启新会话（New Session）时“像个失忆的初学者”。这是你们日常工作的高频读写区。
-- **包含内容**：
-  - `active-task.md`：宏观 Feature 的任务分解与 Check-list。
-  - `handoff.md`：“我现在做到哪了？”、“刚才踩了什么坑引发报错？”、“下班前还差什么没做？”
-  - `project-facts.md`：项目中隐藏的刚性脾气和踩坑铁律。
-- **AI 行为**：高频读写。触发条件：接到新任务、遇到 Blocker (阻碍)、下班交接时。
-  - **触发口令样例 (简述)**：
-    - **全自动隐式**：当 AI 帮你搞定某个进度时，它会偷偷去把 `active-task.md` 打上勾 `[x]`。
-    - **显式存盘交接**：“我要下班了，整理一下现在的代码状况，更新记忆流。”（AI 会将断点写入 `handoff.md`）
-    - **跨端抛出坑**：“前端的 CORS 报红了，我修不好，记入 Blocker 留给后端。”（AI 会保留错误现场）
-    - **立此存照当规矩**：“刚才修了半天，原来老代码主键叫 `userId`，把这个记入常驻记忆！”（AI 会沉淀到 `project-facts.md`）
-  - 📖 *更详尽的对讲实操剧本与自动触发细节，请移步:* 👉 **[记忆流同步实战指引](00_ai_system/memory-sync-examples.md)**
+> 本文档回答“整个 SOP 流程是什么”。具体执行手册在 [07_sop/](07_sop/README.md)，岗位手册在 [06_handbooks/](06_handbooks/README.md)。
 
 ---
 
-## 🎭 角色与岗位流转
+## 核心结论
 
-我们的团队目前提供两套并行的角色体系。无论你选择哪一种，底层的 `memory/` 协作规范是完全一致的。
+AI-native coding 不是让 AI 一句话生成完整系统，而是把 AI 编排成受约束、可验证、可审查的软件工程执行层。
 
-### A. 全面 AI-Native 化（目标态）
-岗位按**“解决什么问题”**划分，而不是“你会用什么语言”。
-1. **交付工程师 (Delivery Engineer)**：一个人利用 AI 打穿全栈。拉取需求，规划数据库，写后端接口，刷前端界面，完成联调并部署。
-2. **AI 工程师 (AI Engineer)**：不再纠结 CRUD，专攻 Agent 偏排、Prompt 优化、LLM 基座的接驳与系统架构。
-3. **质量工程师 (Quality Engineer)**：测试不再是“点点点”，升级为：用 AI 编写自动化测试、系统监控定海神针、安全防线。
-4. **产品负责人 (Product Owner)**：定义“做什么”和“为什么做”，用深度推演压迫系统逻辑。
+人的职责：
 
-### B. 传统研发分工（过渡期）
-我们理解业务团队需要平滑演进。**前端、后端、测试、产品** 可以完全保留现有的分工协作方式。但在该架构下，你们手中握有了大模型赋予的**超能力 (Superpowers)**。
+- 定目标、边界、优先级。
+- 做架构取舍和风险接受。
+- 确认契约、发布、合并。
 
-- **产品经理**：你可以用 `/deep-interview` 技能让 AI 进行深刻的 Socratic 提问，逼你把需求中的逻辑漏洞填补完整，再自动生成 PRD 存入 `docs/01_product/`。
-- **前端工程师**：如果你遇到联调卡点或写完了一套组件，把状态写进 `memory/handoff.md`：“*登录组件联调失败，因为后端的跨域 CORS 没开，等待后端处理。*”
-- **后端工程师**：接手后，醒来的 AI 会自动读取 `handoff.md`，理解前端的跨域诉求，修复 CORS，并在 `active-task.md` 里打上 ✅，留下交接反馈。
-- **测试工程师**：可以使用 `/qa` 命令让 AI 执行自动化验收，一旦发现缺陷，直接向 `handoff.md` 写入新发现的 Bug，阻塞整个开发流。
+AI 的职责：
 
-📌 **过渡期指引**：即使是传统分工角色，核心协作不再是发无数的微信消息对齐，而是通过共同更新 `memory/active-task.md`（主线进度箱）和 `memory/handoff.md`（高频转交信）实现 **“代码与状态的异步去中心化协同”**。
+- 探索代码库。
+- 澄清需求。
+- 拆任务。
+- 写测试和实现。
+- 跑验证。
+- 修复反馈。
+- 更新文档和记忆。
+
+一句话流程：
+
+```text
+需求 → 架构 → 契约 → 垂直切片 → 小 PR → Review → 发布 → 复盘沉淀
+```
 
 ---
 
-## 🎯 最佳场景实战样板
+## 三层入口
 
-以下将用最直观的样例演示这套系统的威力：
+| 层级 | 文件 | 用途 |
+|------|------|------|
+| 总纲 | 本文档 | 统一心智和总流程 |
+| SOP 工作台 | [07_sop/README.md](07_sop/README.md) | 单人、多人、简单项目、复杂项目的具体流程 |
+| 角色手册 | [06_handbooks/README.md](06_handbooks/README.md) | 产品、前端、后端、测试、运维、AI 工程师操作手册 |
 
-### 场景一：产品经理到研发的破冰交接
-1. **产品经理**通过 AI 生成了完备的《商品管理 PRD》，将其定稿存入 `docs/01_product/prd_v2.md`（写入 ROM）。
-2. 在 `memory/active-task.md` (RAM) 中写下初始总任务：
-   ```markdown
-   ## 商品管理模块开发
-   - [ ] 1. 数据库定义设计
-   - [ ] 2. 商品列表页面开发
-   ```
-3. 研发工程师接手，唤醒 AI，指令为：*“参考 `docs/01_product/prd_v2.md`，执行 `memory/active-task.md` 的第一步数据库设计。”*
+新成员只需要按顺序读：
 
-### 场景二：研发工程师（传统后端/全栈）遇坑交接
-1. 研发用 AI 写完代码后，遇到一个棘手的组件渲染警告，但是要赶着去开会。
-2. 触发 AI 执行强制更新记忆流（规则 `.claude/rules/02-memory-protocol.md` 会起作用），AI 会在 `memory/handoff.md` 留下这样一段：
-   ```markdown
-   **时间**: 2026-03-27_15:30
-   - **刚干了什么**: 后端接口完全搞定，开始堆组件。
-   - **阻塞点 (Blocker)**: React 的 Suspense 出现了瀑布流请求，性能不好，我没修完。
-   - **下一步 (Next steps)**: 重构该页面的数据获取机制，改为并行 fetching。
-   ```
-3. 下班回家后，换了一台电脑重新打开终端。AI 根据 `handoff.md` 秒速恢复状态：“好的老板，我看到咱们下午被 Suspense 卡脖子了，现在我立刻给出并行获取的代码！”
+1. 本文档。
+2. [07_sop/README.md](07_sop/README.md) 选择场景。
+3. [06_handbooks/README.md](06_handbooks/README.md) 选择岗位。
+4. 使用 [任务卡模板](07_sop/templates/task-card.md) 开始工作。
 
-### 场景三：项目组踩坑铁律的自我沉淀
-1. 刚修完一个 Bug，由于后端强制要求使用 `snake_case` 而引发了漫长的联调。
-2. 把这个血泪教训通过 AI 沉淀到 `memory/project-facts.md`：
-   ```markdown
-   # 避坑铁律
-   1. 无论前端 JS 怎么写，发送给本项目的 API Body 永远必须是 `snake_case`。
-   ```
-3. 从此，即使换一波程序员、换一个新的大模型 Agent 来写代码，只要它接手项目碰到了这些业务规范，扫一眼 `project-facts.md` 就绝不会再犯同样的错。
+---
+
+## ROM 与 RAM
+
+| 区域 | 定位 | 内容 | 修改时机 |
+|------|------|------|----------|
+| `docs/` | ROM，长期知识和团队契约 | PRD、架构、API、DB、测试策略、运维、手册 | 需求定稿、架构确认、契约变更、发布复盘 |
+| `memory/` | RAM，当前上下文和断点 | 当前任务、交接、项目踩坑事实 | 接手任务、卡住、阶段完成、下班交接 |
+| `.claude/rules/` | AI 行为底线 | TDD、反 AI 味、安全、记忆协议 | 脚手架升级或团队共识变化 |
+
+强制规则：
+
+- 长期稳定约定写入 `docs/`。
+- 当前正在做什么写入 `memory/active-task.md`。
+- 当前卡点和下一步写入 `memory/handoff.md`。
+- 反复踩坑的事实写入 `memory/project-facts.md`。
+
+---
+
+## 0-7 阶段总流程
+
+| 阶段 | 目标 | 关键产物 | Gate |
+|------|------|----------|------|
+| 0. 工程底座 | AI 能理解项目并运行验证 | `AGENTS.md`、`CLAUDE.md`、测试命令、CI、目录规则 | 能安装、构建、测试 |
+| 1. 需求澄清 | 把口头需求变成可验收规格 | PRD、用户故事、AC、不做范围 | 每条需求可测试 |
+| 2. 架构边界 | 确认模块、数据、权限和风险边界 | 系统图、模块边界、ADR | 人类确认架构 |
+| 3. 契约优先 | 让前后端、多服务、多语言并行不互踩 | API、DB、事件、错误码、mock、contract test | 契约被确认 |
+| 4. 垂直切片 | 先打通一个真实端到端闭环 | 一个页面/API/DB/E2E 或集成测试 | 切片可运行 |
+| 5. 小批量功能 PR | 每个任务卡一个小 PR | 功能、测试、文档更新 | CI + Review |
+| 6. Review 与硬化 | 补安全、性能、异常、可观测性 | 审查记录、测试报告、runbook | staging 验证 |
+| 7. 发布与复盘 | 发布、回滚、经验沉淀 | changelog、postmortem、project-facts | 反馈闭环 |
+
+完整执行细节见 [07_sop/lifecycle.md](07_sop/lifecycle.md)。
+
+---
+
+## 按场景选择流程
+
+| 场景 | 使用 |
+|------|------|
+| 一个人做简单工具、Demo、内部小系统 | [07_sop/solo.md](07_sop/solo.md) + [07_sop/project-types/simple-project.md](07_sop/project-types/simple-project.md) |
+| 一个人做复杂全栈产品 | [07_sop/solo.md](07_sop/solo.md) + [07_sop/project-types/complex-product.md](07_sop/project-types/complex-product.md) |
+| 多人协作，有产研测运分工 | [07_sop/team.md](07_sop/team.md) + [07_sop/roles/README.md](07_sop/roles/README.md) |
+| 初级研发接任务 | [07_sop/templates/task-card.md](07_sop/templates/task-card.md) + 对应岗位手册 |
+| 资深研发做架构/审查 | [07_sop/lifecycle.md](07_sop/lifecycle.md) + [07_sop/templates/review-checklist.md](07_sop/templates/review-checklist.md) |
+| 前后端接口协作混乱 | [07_sop/templates/contract-change-proposal.md](07_sop/templates/contract-change-proposal.md) |
+
+---
+
+## 角色体系
+
+本脚手架支持两套并行体系。
+
+AI-Native 体系：
+
+| 角色 | 解决的问题 | 手册 |
+|------|------------|------|
+| 产品负责人 | 做什么、为什么做、如何验收 | [product-owner.md](06_handbooks/ai-native/product-owner.md) |
+| 交付工程师 | 端到端交付功能，不按语言栈切割 | [delivery-engineer.md](06_handbooks/ai-native/delivery-engineer.md) |
+| 质量工程师 | 测试、安全、可靠性、可观测性 | [quality-engineer.md](06_handbooks/ai-native/quality-engineer.md) |
+| AI 工程师 | Agent、LLM、AI 流水线 | [ai-engineer.md](06_handbooks/ai-native/ai-engineer.md) |
+
+传统过渡体系：
+
+| 岗位 | 手册 |
+|------|------|
+| 产品经理 | [pm.md](06_handbooks/traditional/pm.md) |
+| 前端工程师 | [frontend.md](06_handbooks/traditional/frontend.md) |
+| 后端工程师 | [backend.md](06_handbooks/traditional/backend.md) |
+| 测试工程师 | [qa.md](06_handbooks/traditional/qa.md) |
+| 运维工程师 | [devops.md](06_handbooks/traditional/devops.md) |
+
+语言栈不是流程入口。Java、Go、Vue、React、TypeScript 只影响验证命令和局部最佳实践，不改变 SOP。
+
+---
+
+## 任务最小单元
+
+任何 AI coding 任务都必须使用任务卡描述：
+
+- 目标。
+- 上下文文件。
+- 允许修改范围。
+- 禁止修改范围。
+- 验收标准。
+- 必须运行的验证命令。
+- 完成后输出。
+
+模板：[07_sop/templates/task-card.md](07_sop/templates/task-card.md)
+
+不接受这种任务：
+
+```text
+帮我把系统做完。
+```
+
+接受这种任务：
+
+```text
+基于 docs/03_architecture/api_specs.md，实现 GET /v1/orders。
+只修改 src/backend/orders 和对应测试。
+不得修改认证中间件和 API 契约。
+先写集成测试，验证未登录 401、只能看自己的订单、分页可用。
+运行 mvn test 或对应模块测试，并输出结果。
+```
+
+---
+
+## 完成定义
+
+只有同时满足以下条件，才能宣称完成：
+
+1. 任务卡验收标准已满足。
+2. 必要测试、构建、lint、typecheck 或替代验证已执行。
+3. 变更范围没有越界。
+4. 文档和契约已同步。
+5. 风险和未覆盖项已说明。
+6. `memory/active-task.md` 或 `memory/handoff.md` 已更新。
+7. 需要人类确认的事项没有被 AI 擅自执行。
+
+---
+
+## 禁止事项
+
+- 未经确认直接 push。
+- 没有测试或验证结果就说完成。
+- 在功能 PR 中顺手大改架构、契约、CI 或权限。
+- 前端自行假设 API 字段。
+- 后端随意改响应结构。
+- 把重要决策只留在聊天记录里。
+- 写模板化、无意义、反人类阅读的 AI 味文档或代码。
