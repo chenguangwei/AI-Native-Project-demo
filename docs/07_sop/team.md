@@ -50,6 +50,20 @@ QA 生成验收用例
 发布与复盘
 ```
 
+每个角色接手任务时，统一先使用 [task-driven-collaboration.md](task-driven-collaboration.md)：
+
+```text
+任务卡
+  ↓
+AI 会话启动 Prompt
+  ↓
+任务分类 + skill chain
+  ↓
+角色手册
+  ↓
+执行、验证、Review、handoff
+```
+
 ---
 
 ## 阶段责任矩阵
@@ -135,11 +149,11 @@ Review 至少覆盖：
 **[角色 - 日期 时间]**
 
 - **刚刚干了什么**:
-  - 
+  -
 - **剩下的坑 / Blocker**:
-  - 
+  -
 - **下一步要做什么 (Next Steps)**:
-  - 
+  -
 ```
 
 详细模板见 [templates/handoff.md](templates/handoff.md)。

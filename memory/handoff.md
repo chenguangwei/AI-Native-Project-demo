@@ -2,7 +2,21 @@
 
 > **前情提要**: 这不是流水账，这是给下一个会话（或者是给接手的人类）留的接力棒。旧的记录请随时清空。
 
-## 最新交接点 
+## 最新交接点
+**[交付工程师 - 2026-05-29 15:43]**
+
+- **刚刚干了什么**:
+  - 根据用户反馈，补强 `docs/07_sop/`：不只描述流程，而是明确拿到任务后如何和 Claude Code / Codex 协作。
+  - 新增 `docs/07_sop/task-driven-collaboration.md`，覆盖任务分类、skill chain、标准 Prompt、TDD 执行、Debug、Review、handoff 和常见任务剧本。
+  - 新增 `docs/07_sop/templates/ai-session-prompt.md`、`docs/07_sop/templates/skill-chain-plan.md`。
+  - 扩展 `docs/07_sop/templates/task-card.md`：加入 AI 工具、任务类型、skill chain、每步输入输出、AI 执行 Prompt 和停止条件。
+  - 更新总纲、README、solo/team/lifecycle 和角色手册入口。
+- **剩下的坑 / Blocker**:
+  - 无功能阻塞。
+  - 尚未提交；当前是文档变更。
+- **下一步要做什么 (Next Steps)**:
+  - 人类确认后可提交并推送；不要未经确认 push。
+
 **[交付工程师 - 2026-05-29 14:45]**
 
 - **刚刚干了什么**:

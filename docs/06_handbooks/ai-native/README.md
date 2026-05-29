@@ -49,6 +49,7 @@
 - [单人流程](../../07_sop/solo.md)
 - [团队流程](../../07_sop/team.md)
 - [角色与语言栈路由](../../07_sop/roles/README.md)
+- [任务驱动协作剧本](../../07_sop/task-driven-collaboration.md)
 
 ---
 

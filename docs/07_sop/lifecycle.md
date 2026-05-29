@@ -19,6 +19,18 @@
 
 ---
 
+## 每个阶段如何驱动 AI
+
+阶段是宏观流程，具体执行统一落到任务驱动协作：
+
+1. 打开 [task-driven-collaboration.md](task-driven-collaboration.md)。
+2. 用 [templates/ai-session-prompt.md](templates/ai-session-prompt.md) 启动 Claude Code / Codex。
+3. 让 AI 先分类任务并选择 skill chain。
+4. 用 [templates/task-card.md](templates/task-card.md) 固化任务。
+5. 按 skill chain 执行、验证、review、交接。
+
+---
+
 ## 阶段 0：工程底座
 
 必备动作：

@@ -12,6 +12,7 @@
 |------|------|
 | 团队协作主流程 | [../../07_sop/team.md](../../07_sop/team.md) |
 | 按岗位/语言栈找手册 | [../../07_sop/roles/README.md](../../07_sop/roles/README.md) |
+| 拿到任务后如何和 AI 工具协作 | [../../07_sop/task-driven-collaboration.md](../../07_sop/task-driven-collaboration.md) |
 | 交给 AI 执行任务 | [../../07_sop/templates/task-card.md](../../07_sop/templates/task-card.md) |
 | 接口或 DB 契约变化 | [../../07_sop/templates/contract-change-proposal.md](../../07_sop/templates/contract-change-proposal.md) |
 

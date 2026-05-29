@@ -61,6 +61,7 @@
 | 一个人做简单项目 | [单人 SOP](docs/07_sop/solo.md) + [简单项目 SOP](docs/07_sop/project-types/simple-project.md) |
 | 多人协作 | [团队 SOP](docs/07_sop/team.md) + [角色路由](docs/07_sop/roles/README.md) |
 | 复杂产品、多语言、多服务 | [复杂产品 SOP](docs/07_sop/project-types/complex-product.md) |
+| 拿到任务，要和 Claude Code / Codex 协作 | [任务驱动协作剧本](docs/07_sop/task-driven-collaboration.md) + [AI 会话启动 Prompt](docs/07_sop/templates/ai-session-prompt.md) |
 | 准备交给 AI 开发 | [AI Coding 任务卡模板](docs/07_sop/templates/task-card.md) |
 
 ---
@@ -207,7 +208,7 @@ AI 脚手架依赖大量软链接 (symlinks) 串联分散的 Skills（如 `gstac
 
 - **macOS / Linux**：`git clone` 后即插即用，无需额外操作。
 - **Windows**：Git 默认会破坏 symlinks（转为纯文本）。**请在 `git clone` 后，在 Git Bash 中运行修复脚本：**
-  
+
   ```bash
   bash scripts/setup-skills.sh
   ```
@@ -380,6 +381,7 @@ git sparse-checkout set ops docs/05_ops memory
 |------|------|
 | [全局操作总纲 SOP(必读)](docs/00_AI_NATIVE_SOP.md) | 最核心的协作规范：0-7 阶段、ROM/RAM、角色体系 |
 | [AI-Native Coding SOP 工作台](docs/07_sop/README.md) | 单人、团队、简单项目、复杂产品、角色路由和任务模板 |
+| [任务驱动协作剧本](docs/07_sop/task-driven-collaboration.md) | 任务输入、skill chain、Prompt、执行、验证、Review、交接 |
 | [Skills 速查索引](docs/06_handbooks/ai-native/SKILLS_INDEX.md) | 88 个强悍技能按 4 大职业分类，含触发方式 |
 | [Commands 命令集](.claude/commands/README.md) | 轻量且高频的核心执行命令 |
 | [Agents 目录](.claude/agents/) | 后台分析师/测试员/监控卫士列表 |

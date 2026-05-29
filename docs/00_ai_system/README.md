@@ -17,6 +17,7 @@
 
 - [AI-Native 操作总纲 (SOP)](../00_AI_NATIVE_SOP.md) — 【必选首读】AI-Native 全局最佳协同架构
 - [AI-Native Coding SOP 工作台](../07_sop/README.md) — 单人、团队、简单项目、复杂项目和模板入口
+- [任务驱动协作剧本](../07_sop/task-driven-collaboration.md) — Claude Code / Codex 的任务输入、skills、验证和交接流程
 - [Skills 速查索引](../06_handbooks/ai-native/SKILLS_INDEX.md) — 88 个技能按岗位分类详情
 - [Commands 命令集](../../.claude/commands/README.md) — 8 个轻量命令
 - [Agents 目录](../../.claude/agents/) — 后台专家 Agent 列表

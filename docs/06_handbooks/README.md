@@ -12,6 +12,7 @@
 | 单人开发 | [../07_sop/solo.md](../07_sop/solo.md) |
 | 多人协作 | [../07_sop/team.md](../07_sop/team.md) |
 | 按角色或语言栈找入口 | [../07_sop/roles/README.md](../07_sop/roles/README.md) |
+| 拿到任务后如何和 AI 工具协作 | [../07_sop/task-driven-collaboration.md](../07_sop/task-driven-collaboration.md) |
 | 要交给 AI 执行 | [../07_sop/templates/task-card.md](../07_sop/templates/task-card.md) |
 
 ---
@@ -63,9 +64,10 @@
 ## 通用参考
 
 - [AI-Native 技能速查表](ai-native/SKILLS_INDEX.md) — 按 4 大 AI 原生岗位分类的 88 个技能
-- [传统全栈/研发技能速查表](traditional/SKILLS_INDEX.md) — 适合旧有研发分工直接选用的技能大全 
-- [AI-Native 操作大纲 SOP](../00_AI_NATIVE_SOP.md) — 全局团队架构协作规范 
+- [传统全栈/研发技能速查表](traditional/SKILLS_INDEX.md) — 适合旧有研发分工直接选用的技能大全
+- [AI-Native 操作大纲 SOP](../00_AI_NATIVE_SOP.md) — 全局团队架构协作规范
 - [AI-Native Coding SOP 工作台](../07_sop/README.md) — 单人/团队/简单项目/复杂产品的可执行流程
+- [任务驱动协作剧本](../07_sop/task-driven-collaboration.md) — Claude Code / Codex 任务协作链路
 - [AI 系统文档](../00_ai_system/) — Claude Code 技巧指南
 - [RAM 记忆机制（内存流转）](../../.claude/rules/02-memory-protocol.md) — 跨会话的任务同步规定（必读）
 

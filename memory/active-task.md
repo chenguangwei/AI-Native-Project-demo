@@ -3,6 +3,9 @@
 ## AI-Native Coding SOP 编排脚手架优化（已完成）
 - [x] 基于 `docs/00_ai_system/ai-coding-guide.md` 提炼 0-7 阶段 AI-native coding 总流程
 - [x] 新增 `docs/07_sop/`，覆盖单人、团队、简单项目、复杂产品、角色路由和任务模板
+- [x] 新增 `docs/07_sop/task-driven-collaboration.md`，补齐“任务输入 → skills → Prompt → 执行 → 验证 → Review → 交接”的可执行协作剧本
+- [x] 新增 `templates/ai-session-prompt.md` 与 `templates/skill-chain-plan.md`，支持 Claude Code / Codex 新任务启动
+- [x] 扩展 `templates/task-card.md`，加入 AI 工具、任务类型、skill chain、每步输入输出和停止条件
 - [x] 重写 `docs/00_AI_NATIVE_SOP.md` 为可执行总纲
 - [x] 更新 `README.md`、`docs/06_handbooks/`、`docs/00_ai_system/README.md` 导航入口
 - [x] 运行本地 Markdown 相对链接检查，确认新增 SOP 导航无死链

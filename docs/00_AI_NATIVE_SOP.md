@@ -45,7 +45,7 @@ AI 的职责：
 1. 本文档。
 2. [07_sop/README.md](07_sop/README.md) 选择场景。
 3. [06_handbooks/README.md](06_handbooks/README.md) 选择岗位。
-4. 使用 [任务卡模板](07_sop/templates/task-card.md) 开始工作。
+4. 使用 [任务驱动协作剧本](07_sop/task-driven-collaboration.md) 和 [任务卡模板](07_sop/templates/task-card.md) 开始工作。
 
 ---
 
@@ -90,6 +90,7 @@ AI 的职责：
 | 一个人做简单工具、Demo、内部小系统 | [07_sop/solo.md](07_sop/solo.md) + [07_sop/project-types/simple-project.md](07_sop/project-types/simple-project.md) |
 | 一个人做复杂全栈产品 | [07_sop/solo.md](07_sop/solo.md) + [07_sop/project-types/complex-product.md](07_sop/project-types/complex-product.md) |
 | 多人协作，有产研测运分工 | [07_sop/team.md](07_sop/team.md) + [07_sop/roles/README.md](07_sop/roles/README.md) |
+| 已拿到具体任务，要和 Claude Code / Codex 协作 | [07_sop/task-driven-collaboration.md](07_sop/task-driven-collaboration.md) + [07_sop/templates/ai-session-prompt.md](07_sop/templates/ai-session-prompt.md) |
 | 初级研发接任务 | [07_sop/templates/task-card.md](07_sop/templates/task-card.md) + 对应岗位手册 |
 | 资深研发做架构/审查 | [07_sop/lifecycle.md](07_sop/lifecycle.md) + [07_sop/templates/review-checklist.md](07_sop/templates/review-checklist.md) |
 | 前后端接口协作混乱 | [07_sop/templates/contract-change-proposal.md](07_sop/templates/contract-change-proposal.md) |

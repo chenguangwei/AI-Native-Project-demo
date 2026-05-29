@@ -24,6 +24,7 @@ cat memory/project-facts.md
 
 | 今天要做什么 | 打开 |
 |-------------|------|
+| 刚拿到任务，不知道怎么喂给 AI | [task-driven-collaboration.md](task-driven-collaboration.md) + [templates/ai-session-prompt.md](templates/ai-session-prompt.md) |
 | 需求还不清楚 | [templates/feature-spec.md](templates/feature-spec.md) |
 | 要写功能 | [templates/task-card.md](templates/task-card.md) |
 | 要改接口 | [templates/contract-change-proposal.md](templates/contract-change-proposal.md) |
@@ -34,22 +35,26 @@ cat memory/project-facts.md
 ## 单人闭环
 
 ```text
-1. 写清楚目标
+1. 用 ai-session-prompt 启动 AI
   ↓
-2. 让 AI 追问需求和边界
+2. 让 AI 分类任务并选择 skill chain
   ↓
-3. 产出任务卡
+3. 让 AI 追问需求和边界
   ↓
-4. 先写测试或验收脚本
+4. 产出任务卡
   ↓
-5. 最小实现
+5. 先写测试或验收脚本
   ↓
-6. 运行验证命令
+6. 最小实现
   ↓
-7. 自审 + 清理 AI 味
+7. 运行验证命令
   ↓
-8. 更新 memory
+8. 自审 + 清理 AI 味
+  ↓
+9. 更新 memory
 ```
+
+具体 Prompt 和 skill chain 见 [task-driven-collaboration.md](task-driven-collaboration.md)。
 
 ---
 
@@ -95,6 +100,8 @@ cat memory/project-facts.md
 只能修改任务卡允许的文件。
 完成后必须告诉我运行了哪些验证命令。
 ```
+
+更完整的新会话模板见 [templates/ai-session-prompt.md](templates/ai-session-prompt.md)。
 
 不要做：
 

@@ -7,9 +7,12 @@
 ### Added
 - `docs/07_sop/`：新增 AI-Native Coding 可执行 SOP 工作台，覆盖单人、团队、简单项目、复杂产品、角色路由和任务模板。
 - `docs/07_sop/templates/`：新增任务卡、需求规格、契约变更、PR Review、handoff 模板。
+- `docs/07_sop/task-driven-collaboration.md`：新增任务驱动协作剧本，明确 Claude Code / Codex 的任务分类、skill chain、Prompt、执行、验证、Review、交接流程。
+- `docs/07_sop/templates/ai-session-prompt.md`、`skill-chain-plan.md`：新增 AI 会话启动和 skill chain 计划模板。
 
 ### Changed
 - `docs/00_AI_NATIVE_SOP.md`：重写为 0-7 阶段总纲 SOP，明确 ROM/RAM、角色体系、任务最小单元和完成定义。
+- `docs/07_sop/templates/task-card.md`：补充 AI 工具、任务类型、skill chain、每一步输入输出、执行 Prompt 和停止条件。
 - `README.md`、`docs/06_handbooks/README.md`：补充 SOP 快速入口。
 - `docs/06_handbooks/ai-native/README.md`、`docs/06_handbooks/traditional/README.md`：补充阶段 SOP 和角色路由入口。
 
