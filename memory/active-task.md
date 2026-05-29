@@ -1,5 +1,11 @@
 # 🎯 当前主线任务 (Active Tasks)
 
+## AI-Native Coding SOP 开发指南及规则文件优化（进行中）
+- [x] 合并并重构 `docs/00_ai_system/ai-coding-guide.md` 中的重复内容，提炼为统一的开发指南
+- [x] 优化 `.claude/rules/01-behaviors.md`，去除口语化与夸张表达，转为专业技术标准
+- [x] 优化 `.claude/rules/02-memory-protocol.md`，使用标准的记忆交接协议描述
+- [ ] 运行本地 Markdown 相对链接与死链检查，确保新版指南无死链
+
 ## AI-Native Coding SOP 编排脚手架优化（已完成）
 - [x] 基于 `docs/00_ai_system/ai-coding-guide.md` 提炼 0-7 阶段 AI-native coding 总流程
 - [x] 新增 `docs/07_sop/`，覆盖单人、团队、简单项目、复杂产品、角色路由和任务模板
@@ -21,11 +27,11 @@
 - [x] 修复 `scripts/sync-omc-skills.sh`：同步 `.agents/skills` + 维护 `.claude/skills/<skill> -> omc/skills/<skill>`
 - [x] 回归验证：37 个 OMC skill 链接已建立，`deep-interview`/`verify`/`wiki` 等入口可解析
 - [x] 更新 `.agents/skills/omc-upgrade/SKILL.md`，避免后续升级回归
-- [ ] 视需要提交 commit（等待人类确认）
+- [x] 提交 commit 并推送
 
 ## OMC Agents 在 Claude/Codex 不生效（已修复）
 - [x] 复现并确认根因：缺少 `.claude/agents` 与 `.agents/agents` 入口目录
 - [x] 扩展 `scripts/sync-omc-skills.sh`：同步 19 个 OMC agents 到双入口并创建安全别名
 - [x] 回归验证：`omc-architect`/`architect`、`omc-debugger`/`debugger` 在双目录均可解析
 - [x] 更新 `.agents/skills/omc-upgrade/SKILL.md`，将 agents 同步纳入标准流程
-- [ ] 视需要提交 commit（等待人类确认）
+- [x] 提交 commit 并推送
