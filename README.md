@@ -1,3 +1,5 @@
+
+
 # 🧑‍💻 AI Native 脚手架导航
 
 > 基于 AI-原生开发方法论的内部标准脚手架，支持 git subtree 分发到多个项目。
@@ -17,6 +19,7 @@
 ├── SCAFFOLD_VERSION       # 脚手架版本号
 ├── CHANGELOG.md           # 版本变更记录
 ├── CLAUDE.local.md.template  # 本地配置覆盖模板（实际文件不提交）
+├── .mcp.json              # MCP 服务器配置（chrome-devtools）
 │
 ├── .agents/               # 🤖 Agent 技能扩展（gstack / OMC 等）
 │   └── skills/
@@ -380,7 +383,6 @@ git sparse-checkout set ops docs/05_ops memory
 |------|------|
 | [AI-Native 操作手册](docs/06_handbooks/ai-native/README.md) | 4 个 AI-Native 岗位操作指南 |
 | [传统体系操作手册](docs/06_handbooks/traditional/README.md) | 产品/前端/后端/QA/运维完整协作规范 |
-
 
 
 
